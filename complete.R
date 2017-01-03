@@ -9,6 +9,9 @@ complete <- function(directory, id = 1:332){
     else if(i < 100){
       filename <- paste("0", filename, ".csv", sep = "");
     }
+    else{
+      filename <- paste(filename, ".csv", sep = "");
+    }
     curpath <- paste(directory, "/", filename, sep = "");
     curfile <- read.csv(curpath);
     
